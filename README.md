@@ -35,6 +35,12 @@ PINECONE_INDEX_NAME=
 PINECONE_NAME_SPACE=
 ```
 
+3. DMake sure you have these two things setup.
+
+- Check that you've set the vector dimensions to `1536`.
+- Make sure your pinecone namespace is in lowercase.
+- Index name is the one you supplied, not the long url link as I wrongly assumed and got weird PDF errors. (This is what prompted the addition of the python pdf uploads)
+
 - Visit [openai](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key) to retrieve API keys and insert into your `.env` file.
 - Visit [pinecone](https://pinecone.io/) to create and retrieve your API keys, and also retrieve your environment and index name from the dashboard.
 
@@ -62,7 +68,8 @@ Once you've verified that the embeddings and content have been successfully adde
 
 ## Troubleshooting
 
-In general, keep an eye out in the `issues` and `discussions` section of this repo for solutions.
+In general, keep an eye out in the `issues` and `discussions` section of the cloned repo for solutions.
+https://github.com/mayooear/gpt4-pdf-chatbot-langchain
 
 **General errors**
 
