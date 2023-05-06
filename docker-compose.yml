@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: compose/app/Dockerfile
+    ports:
+      - '3000:3000'
+    env_file:
+      - ./.env
+    volumes:
+      - ./docs:/app/docs
+      - ./.env:/app/.env
+
+  pdf_to_text:
+    build:
+      context: .
+      dockerfile: compose/pdf_to_text/Dockerfile
+    env_file:
+      - ./.env
+    volumes:
+      - .:/app:delegated
+    command: /convert

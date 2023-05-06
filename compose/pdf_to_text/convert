@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+
+python pdf_to_text/ingest.py
